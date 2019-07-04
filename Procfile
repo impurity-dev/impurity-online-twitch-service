@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/gateway-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=production
