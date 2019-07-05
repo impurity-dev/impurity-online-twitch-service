@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/twitch-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=production
+web: java -Dserver.port=$PORT -Dspring.profiles.active=production $JAVA_OPTS -jar build/libs/twitch-0.0.1-SNAPSHOT.jar
