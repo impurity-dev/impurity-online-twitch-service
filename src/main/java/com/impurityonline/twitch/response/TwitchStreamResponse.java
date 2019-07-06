@@ -5,7 +5,7 @@ import com.impurityonline.twitch.domain.TwitchStream;
 import lombok.Data;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Data
 public class TwitchStreamResponse {

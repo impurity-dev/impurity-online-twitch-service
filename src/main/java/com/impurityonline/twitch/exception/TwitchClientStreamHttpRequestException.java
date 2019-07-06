@@ -3,7 +3,7 @@ package com.impurityonline.twitch.exception;
 import org.springframework.http.HttpStatus;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public class TwitchClientStreamHttpRequestException extends HttpRequestException {
     private static final long serialVersionUID = -7639579083797350975L;

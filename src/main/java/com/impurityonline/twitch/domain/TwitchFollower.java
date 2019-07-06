@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Data
 public class TwitchFollower {

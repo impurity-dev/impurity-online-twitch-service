@@ -5,7 +5,7 @@ import com.impurityonline.twitch.domain.TwitchUser;
 import lombok.Data;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Data
 public class TwitchApiUserResponse {

@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public abstract class HttpRequestException extends RuntimeException {
     private static final long serialVersionUID = 924869611273733372L;

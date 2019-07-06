@@ -5,7 +5,7 @@ import com.impurityonline.twitch.domain.TwitchStream;
 import com.impurityonline.twitch.domain.TwitchUser;
 
 /**
- * @author Tyler Kokoszka
+ * @author impurity
  */
 public interface TwitchService {
 

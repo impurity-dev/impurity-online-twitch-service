@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import static org.springframework.http.HttpStatus.*;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Slf4j
 @ControllerAdvice

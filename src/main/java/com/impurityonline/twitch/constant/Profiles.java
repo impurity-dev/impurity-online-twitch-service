@@ -1,7 +1,7 @@
 package com.impurityonline.twitch.constant;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public final class Profiles {
     private Profiles() {}

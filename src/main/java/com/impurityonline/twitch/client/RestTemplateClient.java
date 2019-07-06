@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Slf4j
 public abstract class RestTemplateClient {

@@ -4,7 +4,7 @@ import lombok.NonNull;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public class TwitchUrlBuilder {
     private TwitchUrlBuilder() {}

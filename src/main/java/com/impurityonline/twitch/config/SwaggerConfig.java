@@ -19,7 +19,7 @@ import static com.impurityonline.twitch.constant.Profiles.STAGING;
 
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Configuration
 @EnableSwagger2

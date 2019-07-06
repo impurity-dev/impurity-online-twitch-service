@@ -1,7 +1,7 @@
 package com.impurityonline.twitch.exception;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public class TwitchUserNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 851189875199457444L;

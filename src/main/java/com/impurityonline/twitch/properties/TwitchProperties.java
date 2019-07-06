@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.validation.constraints.NotBlank;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Data
 @Component

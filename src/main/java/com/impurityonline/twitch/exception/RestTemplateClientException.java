@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public class RestTemplateClientException extends Exception {
     private static final long serialVersionUID = 3940856042422350250L;

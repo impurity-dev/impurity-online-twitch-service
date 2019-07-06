@@ -14,7 +14,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Slf4j
 @ControllerAdvice

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Api(value = "Twitch API endpoints", tags = {"Twitch"})
 @CrossOrigin(origins = {"https://tmk2003.github.io", "http://localhost:4200"}, maxAge = 3600)
