@@ -49,7 +49,7 @@ public class TwitchClient extends RestTemplateClient {
             return getRequest(
                     buildUserURL(channel).toUriString(),
                     HttpMethod.GET,
-                    new HttpEntity(this.getHeaders()),
+                    new HttpEntity<>(this.getHeaders()),
                     TwitchApiUserResponse.class
             );
         } catch (RestTemplateClientException ex) {
@@ -69,7 +69,7 @@ public class TwitchClient extends RestTemplateClient {
             return getRequest(
                     buildStreamURL(channel).toUriString(),
                     HttpMethod.GET,
-                    new HttpEntity(this.getHeaders()),
+                    new HttpEntity<>(this.getHeaders()),
                     TwitchApiStreamResponse.class
             );
         } catch (RestTemplateClientException ex) {
@@ -89,7 +89,7 @@ public class TwitchClient extends RestTemplateClient {
             return getRequest(
                     buildFollowersURL(twitchUserId).toUriString(),
                     HttpMethod.GET,
-                    new HttpEntity(this.getHeaders()),
+                    new HttpEntity<>(this.getHeaders()),
                     TwitchApiFollowerResponse.class
             );
         } catch (RestTemplateClientException ex) {
