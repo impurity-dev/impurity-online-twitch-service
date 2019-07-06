@@ -1,7 +1,7 @@
 package com.impurityonline.twitch.exception;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public class TwitchStreamNotFoundException extends RuntimeException {
     private static final long serialVersionUID = 8580019017578654606L;

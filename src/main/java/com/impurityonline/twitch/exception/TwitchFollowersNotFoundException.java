@@ -1,7 +1,7 @@
 package com.impurityonline.twitch.exception;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 public class TwitchFollowersNotFoundException extends RuntimeException {
     private static final long serialVersionUID = -9165104650581074562L;

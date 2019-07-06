@@ -21,7 +21,7 @@ import static com.impurityonline.twitch.builder.TwitchUrlBuilder.*;
 import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 
 /**
- * @author tmk2003
+ * @author impurity
  */
 @Slf4j
 @Component
