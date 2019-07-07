@@ -16,9 +16,9 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 /**
  * @author impurity
  */
-@Api(value = "Twitch API endpoints", tags = {"Twitch"})
+@Api(value = "Twitch User API endpoints", tags = {"Twitch"})
 @CrossOrigin(origins = {"https://tmk2003.github.io", "http://localhost:4200"}, maxAge = 3600)
-@RequestMapping("/twitch/v1")
+@RequestMapping("/v1/users")
 @RestController
 public class TwitchController {
 
@@ -32,7 +32,7 @@ public class TwitchController {
             @ApiResponse(code = 503, message = "The twitch api is unavailable")
     })
     @GetMapping(
-            value = "/users/{channelName}",
+            value = "/{channelName}",
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE
     )
@@ -51,7 +51,7 @@ public class TwitchController {
             @ApiResponse(code = 503, message = "The twitch api is unavailable")
     })
     @GetMapping(
-            value = "/users/{channelName}/streams",
+            value = "/{channelName}/streams",
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE
     )
@@ -70,7 +70,7 @@ public class TwitchController {
             @ApiResponse(code = 503, message = "The twitch api is unavailable")
     })
     @GetMapping(
-            value = "/users/{channelName}/followers",
+            value = "/{channelName}/followers",
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE
     )
@@ -89,7 +89,7 @@ public class TwitchController {
             @ApiResponse(code = 503, message = "The twitch api is unavailable")
     })
     @GetMapping(
-            value = "/users/{channelName}/followers/total",
+            value = "/{channelName}/followers/total",
             consumes = APPLICATION_JSON_VALUE,
             produces = APPLICATION_JSON_VALUE
     )

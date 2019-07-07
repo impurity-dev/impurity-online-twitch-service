@@ -1,5 +1,6 @@
 package com.impurityonline.twitch.config;
 
+import com.impurityonline.twitch.TwitchApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -15,7 +16,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.*;
 
 import static com.impurityonline.twitch.constant.Profiles.LOCAL;
-import static com.impurityonline.twitch.constant.Profiles.STAGING;
 
 
 /**
@@ -23,7 +23,7 @@ import static com.impurityonline.twitch.constant.Profiles.STAGING;
  */
 @Configuration
 @EnableSwagger2
-@Profile({LOCAL, STAGING})
+@Profile({LOCAL})
 public class SwaggerConfig {
 
     private static final Contact DEFAULT_CONTACT = new Contact(
@@ -46,7 +46,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.impurity.twitch.controller"))
+                .apis(RequestHandlerSelectors.basePackage(TwitchApplication.class.getPackageName() + ".controller"))
                 .build()
                 .apiInfo(DEFAULT_API_INFO)
                 .produces(DEFAULT_PRODUCES_AND_CONSUMES)
