@@ -59,10 +59,8 @@ tasks.withType(JavaCompile) {
 }
 
 test {
-	useJUnitPlatform {
-		includeEngines 'junit-jupiter'
-	}
-	
+	useJUnitPlatform()
+
 	testLogging {
 		events "Passed", "Skipped", "Failed"
 	}
