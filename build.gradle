@@ -76,6 +76,8 @@ sonarqube {
 		property "sonar.language", "java"
 		property "sonar.sources", "src/main"
 		property "sonar.tests", "src/test"
+		property "sonar.sourceEncoding", "UTF-8"
+		property "sonar.java.coveragePlugin", "jacoco"
 		property "sonar.projectName", "impurity-online-twitch-service"
 		property "sonar.projectKey", "tmk2003_impurity-online-twitch-service"
 	}
