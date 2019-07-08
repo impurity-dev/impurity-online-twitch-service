@@ -62,6 +62,7 @@ test {
 	useJUnitPlatform {
 		includeEngines 'junit-jupiter'
 	}
+	
 	testLogging {
 		events "Passed", "Skipped", "Failed"
 	}
