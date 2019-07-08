@@ -53,7 +53,9 @@ tasks.withType(JavaCompile) {
 }
 
 test {
-	useJUnitPlatform()
+	useJUnitPlatform {
+		includeEngines 'junit-jupiter'
+	}
 }
 
 jacoco {
