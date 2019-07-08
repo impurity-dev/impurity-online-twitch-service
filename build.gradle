@@ -3,11 +3,13 @@ plugins {
 	id 'java'
 	id 'org.sonarqube' version '2.7'
 	id 'jacoco'
+	id 'idea'
 }
 
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'jacoco'
 apply plugin: 'org.sonarqube'
+apply plugin: 'idea'
 
 group = 'com.impurityonline'
 version = '0.0.1-SNAPSHOT'
@@ -25,6 +27,10 @@ repositories {
 
 ext {
 	set('springCloudVersion', "Greenwich.SR1")
+	sonarProjectName = 'impurity-online-twitch-service'
+	sonarProjectKey = 'tmk2003_impurity-online-twitch-service'
+	jacocoDestinationFile = "${buildDir}/jacoco/test.exec"
+	jacocoExclusions = ['**/main*']
 }
 
 dependencies {
@@ -37,8 +43,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.0'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.0'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.0'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.0'
 }
 
 dependencyManagement {
@@ -53,8 +59,9 @@ tasks.withType(JavaCompile) {
 }
 
 test {
-	useJUnitPlatform {
-		includeEngines 'junit-jupiter'
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
 	}
 }
 
