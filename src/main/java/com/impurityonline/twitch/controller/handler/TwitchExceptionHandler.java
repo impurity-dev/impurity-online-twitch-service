@@ -1,4 +1,4 @@
-package com.impurityonline.twitch.handler;
+package com.impurityonline.twitch.controller.handler;
 
 import com.impurityonline.twitch.domain.ApiError;
 import com.impurityonline.twitch.exception.*;
