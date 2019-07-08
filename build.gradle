@@ -6,14 +6,12 @@ plugins {
 	id 'idea'
 }
 
-apply plugin: 'io.spring.dependency-management'
-apply plugin: 'jacoco'
-apply plugin: 'org.sonarqube'
+apply plugin: 'java'
 apply plugin: 'idea'
-
-group = 'com.impurityonline'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '12'
+apply plugin: 'jacoco'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.sonarqube'
 
 configurations {
 	compileOnly {
@@ -27,24 +25,26 @@ repositories {
 
 ext {
 	set('springCloudVersion', "Greenwich.SR1")
-	sonarProjectName = 'impurity-online-twitch-service'
-	sonarProjectKey = 'tmk2003_impurity-online-twitch-service'
-	jacocoDestinationFile = "${buildDir}/jacoco/test.exec"
-	jacocoExclusions = ['**/main*']
+	set('jUnitVersion', "5.3.0")
+	set('swaggerVersion', "2.9.2")
+	group = 'com.impurityonline'
+	version = '0.0.1-SNAPSHOT'
+	sourceCompatibility = '12'
+	targetCompatibility = '12'
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation "io.springfox:springfox-swagger2:2.9.2"
-	implementation "io.springfox:springfox-swagger-ui:2.9.2"
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.springframework.security:spring-security-test'
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.0'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.0'
+	implementation "org.springframework.boot:spring-boot-starter-actuator"
+	implementation "org.springframework.boot:spring-boot-starter-webflux"
+	implementation "org.springframework.boot:spring-boot-starter-web"
+	implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
+	implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+	compileOnly "org.projectlombok:lombok"
+	annotationProcessor "org.projectlombok:lombok"
+	testImplementation "org.springframework.boot:spring-boot-starter-test"
+	testImplementation "org.springframework.security:spring-security-test"
+	testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
 }
 
 dependencyManagement {
@@ -59,9 +59,11 @@ tasks.withType(JavaCompile) {
 }
 
 test {
-	useJUnitPlatform()
+	useJUnitPlatform {
+		includeEngines 'junit-jupiter'
+	}
 	testLogging {
-		events "passed", "skipped", "failed"
+		events "Passed", "Skipped", "Failed"
 	}
 }
 
