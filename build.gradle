@@ -29,8 +29,7 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "Greenwich.SR1")
-	set('jUnitVersion', "5.3.0")
+	set('springCloudVersion', "Greenwich.RELEASE")
 	set('swaggerVersion', "2.9.2")
 }
 
@@ -44,8 +43,8 @@ dependencies {
 	annotationProcessor "org.projectlombok:lombok"
 	testImplementation "org.springframework.boot:spring-boot-starter-test"
 	testImplementation "org.springframework.security:spring-security-test"
-	testImplementation "org.junit.jupiter:junit-jupiter-api:${jUnitVersion}"
-	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
+	testImplementation "org.junit.jupiter:junit-jupiter-api"
+	testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
 }
 
 dependencyManagement {
